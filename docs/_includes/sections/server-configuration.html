@@ -1,0 +1,21 @@
+<h1>Server Configuration</h1>
+
+<p>
+    The <code>raw</code> property will only emit if the <code>pushRaw</code> attribute in the appender configuration
+    is set to <code>true</code>.
+</p>
+
+{% highlight json %}
+
+{
+    "events" : [{
+        "level" : 200,
+        "message" : "And error occurred in the request",
+        "raw" : {
+            "marker": "error[ http ]",
+            "error": "Malformed request"
+        }
+    }]
+}
+
+{% endhighlight %}

@@ -1,0 +1,68 @@
+{
+  "name": "@log4js2/http-appender",
+  "version": "1.0.0-beta.1",
+  "description": "Log4js2 appender for HTTP resources",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "posttest": "codecov -f coverage/*.json"
+  },
+  "author": {
+    "name": "Robin Schultz",
+    "email": "robin@anigenero.com",
+    "url": "http://anigenero.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anigenero/log4js2-http-appender.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anigenero/log4js2-http-appender/issues"
+  },
+  "keywords": [
+    "log4js2",
+    "appender",
+    "http",
+    "logging",
+    "log4js"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/anigenero/log4js2-http-appender#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.2",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "@log4js2/core": "^2.0.0-beta.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-sonarts": "^1.8.0",
+    "typescript": "^3.1.6"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/dist/",
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/__tests__/*.spec.(t|j)s"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s?": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "reflect-metadata": "^0.1.12"
+  }
+}

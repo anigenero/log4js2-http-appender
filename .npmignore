@@ -1,0 +1,14 @@
+.idea
+
+/coverage
+/src
+/types
+
+index.html
+/docs
+
+.travis.yml
+jest.setup.js
+tsconfig.json
+tslint.json
+webpack.config.js

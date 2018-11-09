@@ -1,0 +1,20 @@
+theme: jekyll-theme-architect
+
+title: "@log4js2/http-appender"
+description: "HTTP appender for log4js2"
+
+exclude: ['README.md']
+
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+highlighter: rouge
+
+github:
+  is_project_page: true
+  repository_name: "log4js2-http-appender"
+  repository_url: "https://github.com/anigenero/log4js2-http-appender"
+  owner_name: "Robin Schultz"
+  owner_url: "https://github.com/anigenero/"
