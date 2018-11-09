@@ -1,5 +1,6 @@
 import { Appender, ILogEvent, LogAppender } from '@log4js2/core';
 import { IHttpAppenderConfiguration } from './http.appender.config';
+import { IHttpLogEvent } from './http.log.event';
 
 @Appender('HttpAppender')
 export class HttpAppender extends LogAppender<IHttpAppenderConfiguration> {
@@ -31,6 +32,17 @@ export class HttpAppender extends LogAppender<IHttpAppenderConfiguration> {
      * @private
      */
     private _appendHttpLogEvent(event: ILogEvent) {
+
+        const httpEvent: IHttpLogEvent = {
+            message: this.format(event),
+            level: event.level
+        };
+
+        if (this._config.pushRaw) {
+            httpEvent.raw = event;
+        }
+
+        // TODO: publish event
 
     }
 

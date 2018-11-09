@@ -34,7 +34,7 @@ import {HttpAppender} from '@log4js2/http-appender';
 configure({
     level: LogLevel.INFO
     layout: '%d [%p] %c %M:%line:%column - %m %ex',
-    appenders: [{
+    appenders: ['Console', {
         name: 'Http',
         appender: HttpAppender,
         config: {
@@ -43,10 +43,14 @@ configure({
     }],
     loggers: [{
         tag: 'App',
-        logLevel : LogLevel.INFO
+        logLevel : LogLevel.INFO,
+        appenders: ['Http']
     }]
 });
 ```
+
+__Note:__ because posting via HTTP can be intensive, it is a good idea to ensure your appender is only receiving logs 
+from appropriate loggers.
 
 ## Contributors
 Library built and maintained by [Robin Schultz](http://anigenero.com)
