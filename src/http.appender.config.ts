@@ -7,4 +7,6 @@ export interface IHttpAppenderConfiguration {
 
     url: string;
 
+    headers?: { [key: string]: string };
+
 }
